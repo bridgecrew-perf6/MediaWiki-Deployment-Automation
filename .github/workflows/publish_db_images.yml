@@ -1,0 +1,40 @@
+name: publish_mariadb_image
+
+on:
+  push:
+   # branches: [ main ]
+    paths:
+    - 'mariadb/**'
+  #  - '.github/workflows/**'
+  pull_request:
+  #  branches: [ main ]
+    paths:
+    - 'mariadb/**'
+ #   - '.github/workflows/**'
+
+env:
+  USERNAME: vmpuser
+  IMAGE_NAME: mariadb
+  
+jobs:
+  mariadb_image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build mariadb image
+        run: |
+          HOME_DIR=$PWD
+          chmod -R 777 $HOME_DIR/mariadb
+          cd $HOME_DIR/mariadb
+          docker build . --file Dockerfile --tag $USERNAME/$IMAGE_NAME
+          
+      - name: Push mariadb image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME
+
