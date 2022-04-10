@@ -27,8 +27,10 @@ Deployment
  ![](images/Mediawiki%20SVC.jpg) 
  
 
-CI/CD and workflow
+CI/CD and Workflow
 ------------------
+  - git push -> GitHub -> GitHub Action Trigger -> build Docker Images (App Image)
+  - Pull App Image + MariaDB Image (from DockerHub) -> Deploy on K8s Cluster (minicube, leveraging service discovery)
 
  
 This repository contains:
