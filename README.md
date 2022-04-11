@@ -30,7 +30,7 @@ Deployment
  ![](images/Mediawiki%20SVC.jpg) 
  
 
-CI/CD and Workflow
+CI/CD Workflow
 ------------------
   - git push -> GitHub -> GitHub Action Trigger -> build Images (based upon kubernetes objects)
   - Pull Mediawiki Image and MariaDB Image (from DockerHub)-> Deploy on K8s Cluster
