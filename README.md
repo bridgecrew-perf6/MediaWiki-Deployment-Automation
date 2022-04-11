@@ -32,8 +32,8 @@ Deployment
 
 CI/CD and Workflow
 ------------------
-  - git push -> GitHub -> GitHub Action Trigger -> build Docker Images (App Image)
-  - Pull App Image + MariaDB Image (from DockerHub) -> Deploy on K8s Cluster (minicube, leveraging service discovery)
+  - git push -> GitHub -> GitHub Action Trigger -> build Images (based upon kubernetes objects)
+  - Pull Mediawiki Image and MariaDB Image (from DockerHub)-> Deploy on K8s Cluster
 
  
 This repository contains:
