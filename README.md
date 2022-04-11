@@ -13,9 +13,11 @@ Design
 -------
   - Database as a service
   - Mediawiki as a service
+  
   - Database docker image contians:                                                                                                                       
       a. mariadb-server and mysql                                                                                             
-      Use: docker pull vmpuser/mariadb:latest      
+      Use: docker pull vmpuser/mariadb:latest    
+      
   - mediawiki docker image contians :                                                                                                    
       a. apache 2.4.46 verison                                                                                                                 
       b. php: 7.3.7 version                                                                                                                 
