@@ -4,8 +4,8 @@
 
 Requirement:
 ------------
-1. Database: In this we used mariadb
-2. Apache: This is used for Running the Mediawiki server 
+1. Database: Used mariadb
+2. Apache: Used for Running the Mediawiki server 
 3. PHP: For running mediawiki application and it should be (>= 5.5) 
 4. Mediawiki: MediaWiki is a free and open-source wiki application written in PHP
 
@@ -13,15 +13,18 @@ Design
 -------
   - Database as a service
   - Mediawiki as a service
-  - Database docker image contians: 
-      a. mariadb-server and mysql
-      Use: docker pull 11nehas/mariadb:latest      
-  - mediawiki docker image contians : 
-      a. apache 2.4.46 verison
-      b. php: 7.3.7 version
-      c. mediawiki: 1.33.0 version 
-      Use: docker pull 11nehas/mediawiki:latest 
-
+  
+  - Database docker image contians:                                                                                                                       
+      a. mariadb-server and mysql                                                                                             
+      Use: docker pull vmpuser/mariadb:latest    
+      
+  - mediawiki docker image contians :                                                                                                    
+      a. apache 2.4.46 verison                                                                                                                 
+      b. php: 7.3.7 version                                                                                                                 
+      c. mediawiki: 1.33.0 version                                                                                                                 
+      Use: docker pull vmpuser/mediawiki:latest       
+      
+      
 Deployment
 ----------
  ![](images/Mediawiki%20SVC.jpg) 
